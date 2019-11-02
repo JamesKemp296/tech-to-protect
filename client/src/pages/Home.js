@@ -3,8 +3,20 @@ import StatusButton from '../components/StatusButton'
 
 export class Home extends React.Component {
 	state = {
-		color: ''
+		color: '',
+		latitude: null,
+		longitude: null
 	}
+
+	getGeoLocation = () => {
+		navigator.geolocation.getCurrentPosition(
+			postion => this.setState({ latitude: position.coords.latitude,
+																 longitude: position.coords.longitude														
+			}),
+			() => console.log("Geo Location Not Available!")
+		)
+	}
+
   render(){
 		return (
 			<>
