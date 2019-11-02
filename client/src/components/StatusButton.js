@@ -1,8 +1,18 @@
 import React from 'react'
 
-const StatusButton = () => (
-	<button> Placeholder</button>
-)
+class StatusButton extends React.Component {
+	state = {
+		color: 'red'
+	}
+
+	render(){
+		return(
+			<button class={this.props.color}> {this.props.color}</button>
+		)
+	}
+}
+	
+
 
 
 export default StatusButton

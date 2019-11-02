@@ -9,10 +9,10 @@ export class Home extends React.Component {
 		return (
 			<>
 				<h1>Hello World</h1>
-				<StatusButton />
-				<StatusButton  />
-				<StatusButton  />
-				<StatusButton  />
+				<StatusButton color="red"/>
+				<StatusButton color="blue"/>
+				<StatusButton color="green"/>
+				<StatusButton color="black" />
 			</>
 		)
 	}
