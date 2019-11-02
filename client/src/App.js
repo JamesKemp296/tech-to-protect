@@ -11,7 +11,7 @@ function App() {
       <Navbar/>
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/about" component={Form} />
+        <Route path="/form" component={Form} />
       </Switch>
     </BrowserRouter>
   )

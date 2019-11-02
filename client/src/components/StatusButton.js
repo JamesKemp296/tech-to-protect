@@ -17,7 +17,4 @@ class StatusButton extends React.Component {
 	}
 }
 	
-
-
-
 export default StatusButton

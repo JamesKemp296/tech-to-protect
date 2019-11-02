@@ -19,9 +19,16 @@ button {
   border: none;
   margin: 10px;
   display: flex;
+  text-align: center;
 }
 
 #buttons-container {
   display: flex;
   flex-direction: column;
+}
+
+#form-inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5vw;
 }
