@@ -8,11 +8,14 @@ export class Home extends React.Component {
   render(){
 		return (
 			<>
-				<h1>Hello World</h1>
-				<StatusButton color="red"/>
-				<StatusButton color="blue"/>
-				<StatusButton color="green"/>
-				<StatusButton color="black" />
+				<h1>Status</h1>
+				<input className="id-input" type="text" />
+				<div id="buttons-container">
+					<StatusButton color="black-button" category="DECEASED"/>
+					<StatusButton color="red-button" category="IMMEDIATE"/>
+					<StatusButton color="yellow-button" category="DELAYED"/>
+					<StatusButton color="green-button" category="MINOR"/>
+				</div>
 			</>
 		)
 	}

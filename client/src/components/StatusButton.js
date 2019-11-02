@@ -2,12 +2,17 @@ import React from 'react'
 
 class StatusButton extends React.Component {
 	state = {
-		color: 'red'
+		colorClass: 'red-button'
 	}
 
 	render(){
 		return(
-			<button class={this.props.color}> {this.props.color}</button>
+			<button 
+				className={this.props.color}
+				id={this.props.category}
+			>
+				{this.props.category}
+			</button>
 		)
 	}
 }
