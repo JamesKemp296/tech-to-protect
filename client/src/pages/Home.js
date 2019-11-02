@@ -20,10 +20,10 @@ export class Home extends React.Component {
   render(){
 		return (
 			<>
-				<h1>Status</h1>
+				<h1 className="home-title">Status</h1>
 					<h3>
-							{this.state.latitude}
-							{this.state.longitude}
+						{this.state.latitude}
+						{this.state.longitude}
 					</h3>
 				<input className="id-input" type="text" />
 				<div id="buttons-container">
