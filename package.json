@@ -1,0 +1,12 @@
+{
+  "name": "tech-to-protect",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:JamesKemp296/tech-to-protect.git",
+  "author": "James Kemp <jameskemp2796@yahoo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1"
+  }
+}
