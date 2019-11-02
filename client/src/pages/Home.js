@@ -8,15 +8,6 @@ export class Home extends React.Component {
 		longitude: null
 	}
 
-	getGeoLocation = () => {
-		navigator.geolocation.getCurrentPosition(
-			postion => this.setState({ latitude: position.coords.latitude,
-																 longitude: position.coords.longitude														
-			}),
-			() => console.log("Geo Location Not Available!")
-		)
-	}
-
   render(){
 		return (
 			<>
