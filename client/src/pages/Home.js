@@ -8,10 +8,23 @@ export class Home extends React.Component {
 		longitude: null
 	}
 
+	componentDidMount(){
+		navigator.geolocation.getCurrentPosition(
+			position => this.setState({ latitude: position.coords.latitude,
+																	longitude: position.coords.longitude													
+			}),
+			() => console.log("Geo Location Not Available!")
+		)	
+	}
+
   render(){
 		return (
 			<>
 				<h1>Status</h1>
+					<h3>
+							{this.state.latitude}
+							{this.state.longitude}
+					</h3>
 				<input className="id-input" type="text" />
 				<div id="buttons-container">
 					<StatusButton color="black-button" category="DECEASED"/>
