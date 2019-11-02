@@ -16,7 +16,7 @@ export class Home extends React.Component {
 			() => console.log("Geo Location Not Available!")
 		)	
 	}
-	
+
   render(){
 		return (
 			<>
