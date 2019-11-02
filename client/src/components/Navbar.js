@@ -5,8 +5,8 @@ const Navbar = props => {
   return(
     <nav id="navbar-container">
       <ul className="nav-links">
-        <li><NavLink exact to="/">Home</NavLink></li>
-        <li><NavLink exact to="/form">form</NavLink></li>
+        <li id="home"><NavLink exact to="/">Home</NavLink></li>
+        <li id="form"><NavLink exact to="/form">form</NavLink></li>
       </ul>
     </nav>
   )
