@@ -31,6 +31,7 @@ router.get('/getData', (req, res) => {
     })
 })
 
+//create method
 router.post('/putData', (req, res) => {
     let data = new Data()
 
