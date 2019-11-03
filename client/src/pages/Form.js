@@ -13,31 +13,31 @@ export class Form extends React.Component {
 		}
 
 	handleNameChange = (e) => {
-		this.setState({name: e.this.target.value})
+		this.setState({name: e.target.value})
 	}
 
 	handleAgeChange = (e) => {
-		this.setState({age: Number(e.this.target.value)})
+		this.setState({age: Number(e.target.value)})
 	}
 
 	handleAddressChange = (e) => {
-		this.setState({address: e.this.target.value})
+		this.setState({address: e.target.value})
 	}
 
 	handlePhoneChange = (e) => {
-		this.setState({phone: e.this.target.value})
+		this.setState({phone: e.target.value})
 	}
 
 	handleRespirationChange = (e) => {
-		this.setState({respirations: e.this.target.value})
+		this.setState({respirations: e.target.value})
 	}
 
 	handlePerfusionChange = (e) => {
-		this.setState({perfusion: e.this.target.value})
+		this.setState({perfusion: e.target.value})
 	}
 
 	handleMentalStatusChange = (e) => {
-		this.setState({mentalStatus: e.this.target.value})
+		this.setState({mentalStatus: e.target.value})
 	}
 	
   render(){
