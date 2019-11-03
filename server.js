@@ -4,7 +4,7 @@ const app = express()
 const mongoose = require('mongoose')
 const cors = require('cors')
 const router = express.Router()
-const Data = require('./data')
+const User = require('./User')
 
 app.use(cors())
 
@@ -20,23 +20,23 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 // get method
 // this method fetches all available data in our database
-router.get('/getData', (req, res) => {
-    Data.find((err, data) => {
+router.get('/getUser', (req, res) => {
+    User.find((err, user) => {
         if (err) return `this is the error ${err}`
-        return res.json({ data })
+        return res.json({ user })
     })
 })
 
 //create method
-router.post('/putData', (req, res) => {
-    let data = new Data()
+router.post('/putUser', (req, res) => {
+    let user = new User()
 
     const { id } = req.body;
 
-    data.id = id;
-    data.save((err) => {
+    user.id = id;
+    user.save((err) => {
         if (err) return `This is the error ${err}`
-        return res.json({ data })
+        return res.json({ user })
     })
 })
 
