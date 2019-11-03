@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
@@ -5,7 +6,6 @@ const cors = require('cors')
 const router = express.Router()
 const Data = require('./data')
 
-require('dotenv').config()
 app.use(cors())
 
 // const dbRoute = 'mongodb+srv://andresurdaneta:55865656@techtoprotect-g3o5b.mongodb.net/test?retryWrites=true&w=majority'
