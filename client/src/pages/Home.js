@@ -5,7 +5,28 @@ export class Home extends React.Component {
 	state = {
 		color: '',
 		latitude: null,
-		longitude: null
+		longitude: null,
+		inputId: '',
+		category: ''
+	}
+
+	handleOnSubmit = (event) => {
+		event.preventDefault()
+
+	}
+
+	handleOnClick= (event) => {
+		event.preventDefault()
+		// this.setState({category: event.target.id})
+		// console.log(event.target.id)
+		// console.log(this.state.inputId)
+		const value = event.target.id
+		console.log(value)
+	}
+
+	handleInputChange = (e) => {
+		this.setState({inputId: e.target.value})
+		console.log(this.state.inputId)
 	}
 
 	componentDidMount(){
@@ -24,14 +45,39 @@ export class Home extends React.Component {
 					<h3>
 						{this.state.latitude}
 						{this.state.longitude}
+						{this.state.inputId}
+						{this.state.category}
 					</h3>
-				<input className="id-input" type="text" />
+					<form onSubmit={this.handleOnSubmit}>
+					<input 
+					className="id-input" 
+					type="text" 
+					value={this.state.inputId}
+					onChange={this.handleInputChange}
+				/>
 				<div id="buttons-container">
-					<StatusButton color="black-button" category="DECEASED"/>
-					<StatusButton color="red-button" category="IMMEDIATE"/>
-					<StatusButton color="yellow-button" category="DELAYED"/>
-					<StatusButton color="green-button" category="MINOR"/>
-				</div>
+					<StatusButton 
+						color="black-button" 
+						category="DECEASED"
+						onClick={this.handleOnClick}
+					/>
+					<StatusButton 
+						color="red-button"
+						category="IMMEDIATE"
+						onClick={this.handleOnClick}
+					 />
+					<StatusButton 
+						color="yellow-button" 
+						category="DELAYED"
+						onClick={this.handleOnClick}
+					/>
+					<StatusButton 
+						color="green-button" 
+						category="MINOR"
+						onClick={this.handleOnClick}
+					/>
+					</div>
+				</form>		
 			</>
 		)
 	}
