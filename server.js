@@ -1,28 +1,24 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
-const bodyParser = require('body-parser')
-const logger = require('morgan')
-let cors = require('cors')
+const cors = require('cors')
 const router = express.Router()
-
 const Data = require('./data')
 
+require('dotenv').config()
 app.use(cors())
 
-const dbRoute = 'mongodb+srv://andresurdaneta:55865656@techtoprotect-g3o5b.mongodb.net/test?retryWrites=true&w=majority'
+// const dbRoute = 'mongodb+srv://andresurdaneta:55865656@techtoprotect-g3o5b.mongodb.net/test?retryWrites=true&w=majority'
 
 //connect with the database
-mongoose.connect(dbRoute, { useNewUrlParser: true, useUnifiedTopology: true })
-
-let db = mongoose.connection
-
+const uri = process.env.ATLAS_URI
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+const db = mongoose.connection
 db.once('open', () => console.log('connected to the database'))
-
 // checks if connection with the database is successful
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-// this is our get method
+// get method
 // this method fetches all available data in our database
 router.get('/getData', (req, res) => {
     Data.find((err, data) => {
