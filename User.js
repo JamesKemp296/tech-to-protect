@@ -3,7 +3,7 @@ const { Schema } = mongoose
 
 //data base structure
 
-const DataSchema = new Schema(
+const userSchema = new Schema(
     {
         id: Number,
         status: String,
@@ -21,4 +21,4 @@ const DataSchema = new Schema(
     }
 )
 
-module.exports = mongoose.model('Data', DataSchema)
+module.exports = mongoose.model('User', userSchema)
